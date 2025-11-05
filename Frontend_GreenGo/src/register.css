@@ -1,0 +1,80 @@
+
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+.full_page_container{
+    height: 100vh;
+    background-image: url(./assets/green-leaves-branches-isolated-black-background.jpg);
+    background-size: cover;
+    background-position: cover;
+}
+.input_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.highlight{
+    color: rgb(98, 216, 62);
+}
+.otp_button{
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(50, 194, 219);
+}
+.otp_button:hover{
+    background-color:aqua;
+}
+.input_container input{
+    border: none;
+    outline:none;
+    padding: 10px;
+    border-radius: 5px;
+}
+ .register_label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5vmin;
+    font-weight: 500;
+    width: fit-content;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Register_container{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50% , -50%);
+    min-width: fit-content;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    
+}.Register_page_links{
+    color: rgb(33, 192, 236);
+    text-decoration: underline;
+}
+.Register_container h1{
+    color: rgb(239, 241, 243);
+}
+#submit_button{
+    background-color: rgb(50, 194, 219);
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+#submit_button:hover{
+    background-color:aqua;
+}
+

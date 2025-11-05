@@ -1,0 +1,23 @@
+.Admin_page{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
+}
+.Admin_container{
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color: aqua;
+    display: flex;
+
+}
+.request{
+    flex: 1 1 0;
+    min-width: 100px;
+    height: 70px;
+    background-color: black;
+    border: 1px solid green;
+}

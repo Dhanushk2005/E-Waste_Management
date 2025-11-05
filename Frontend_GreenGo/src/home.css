@@ -1,0 +1,135 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: fixed;
+    left: 100%;
+    transform: translateX(-100%);
+    border: 1px solid black;
+}
+.userBody{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.header_right_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu_links{
+    width: 150px;
+    text-align: center;
+    outline: none;
+    border: none;
+    color: rgb(67, 65, 156);
+    flex-grow: 1;
+    padding: 10px;
+}
+.menu_links:hover{
+    background-color: aquamarine;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+}
+.user_link{
+    margin: 20px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+.user_link:hover{
+    color: blue;
+}
+.user_link:active{
+    color: aliceblue;
+
+}
+#user_options{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 6px;
+}
+#user_options .user_options_line{
+    border-top: 3px solid black;
+}
+.profile_container{
+    background-color: rgba(0, 0, 0, 0.292);
+    width: 250px;
+    text-align: center;
+}
+#userProfile{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.userPage{
+    width: 100vw;
+    height: 100vh;
+}
+.Request_page{
+    text-align: center;
+}
+.user_request_container{
+    display: flex;
+    background-color: aqua;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.register_inputs{
+    display: flex;
+    margin: 30px;
+    text-align: center;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.res_input{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#request_submit_button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(35, 242, 194);
+}
+#request_submit_button:hover{
+    background-color: aqua;
+}
+#request_submit_button:active{
+    background-color: aliceblue;
+}
+
+.user_request_table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.user_request_table td ,
+.user_request_table  th{
+    border: 1px solid black;
+    padding: 20px;
+}
+.user_message{
+    color: blue;
+}
+.userNameInRequest{
+    color: rgb(6, 6, 121);
+    cursor: pointer;
+    text-decoration: underline;
+}
