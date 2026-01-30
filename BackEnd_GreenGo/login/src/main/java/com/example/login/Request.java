@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 @Entity
 public class Request {
@@ -24,6 +25,7 @@ public class Request {
     private String status;
 
     @JsonIgnoreProperties("requestList")
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_email" )
     private Users user;
@@ -37,6 +39,24 @@ public class Request {
     private byte[] back_image;
 
     public Request(){}
+
+    @Override
+    public String toString() {
+        return "Request{" +
+                "request_token=" + request_token +
+                ", category='" + category + '\'' +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", itemCondition='" + itemCondition + '\'' +
+                ", phone=" + phone +
+                ", address='" + address + '\'' +
+                ", dateTime=" + dateTime +
+                ", status='" + status + '\'' +
+                ", user=" + user +
+                ", front_image=" + Arrays.toString(front_image) +
+                ", back_image=" + Arrays.toString(back_image) +
+                '}';
+    }
 
     public Integer getRequest_token() {
         return request_token;

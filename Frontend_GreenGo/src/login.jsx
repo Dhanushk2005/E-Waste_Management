@@ -59,12 +59,6 @@ function Login() {
                     <></>
                 )
             }
-            <Link to="/home" className="links_page">
-                Home
-            </Link>
-            <div id="intro_container">
-                <h1 id="intro">Welcome To <span className="highlight_text">GreenGo</span></h1>
-            </div>
 
             <div className="login_container">
                 <h1 className="heading">

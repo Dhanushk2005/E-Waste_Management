@@ -56,7 +56,6 @@ public class RequestController {
         requestService.sendRequestService(request);
         return ResponseEntity.status(200).body("Request send Successfully");
     }
-
     @GetMapping("/getAll")
     public List<Request> findAllRequest(){
         return requestService.findAll();

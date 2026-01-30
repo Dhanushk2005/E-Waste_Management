@@ -15,8 +15,9 @@ import java.util.List;
 @Repository
 public interface RequestRepository extends JpaRepository<Request , Integer> {
 
+    public List<Request> findAllByOrderByDateTimeDesc();
     public List<Request> findAllByUser(Users user);
     public Request findByUserAndDateTime(Users user , LocalDateTime dateTime);
-    public List<Request> findByStatus(String status);
+    public List<Request> findByStatusOrderByDateTimeDesc(String status);
     public List<Request> findAllByUserAndStatus(Users user , String status);
 }

@@ -20,7 +20,7 @@ public class RequestService {
         repo.save(request);
     }
     public List<Request> findAll(){
-        return repo.findAll();
+        return repo.findAllByOrderByDateTimeDesc();
     }
     public Request findByUserAndDateTime(Users user , LocalDateTime dateTime){
         return repo.findByUserAndDateTime(user , dateTime);
@@ -29,7 +29,7 @@ public class RequestService {
         return repo.findAllByUser(user);
     }
     public List<Request> findByStatus(String status){
-        return repo.findByStatus(status);
+        return repo.findByStatusOrderByDateTimeDesc(status);
     }
     public List<Request> findByUserAndStatus(Users user , String Status){
         return repo.findAllByUserAndStatus(user , Status);

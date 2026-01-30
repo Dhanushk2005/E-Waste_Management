@@ -135,9 +135,6 @@ function Create_register() {
                     <></>
                 )
             }
-            <Link to="/home" className="links_page">
-                Home
-            </Link>
 
             <div className="Register_container">
 

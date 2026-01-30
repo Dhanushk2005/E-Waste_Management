@@ -5,10 +5,13 @@
     width: 50px;
 }
 .full_page_container{
-    height: 100vh;
-    background-image: url(./assets/green-leaves-branches-isolated-black-background.jpg);
-    background-size: cover;
-    background-position: cover;
+    background-color: rgba(44, 44, 44, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 70px 20px 70px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 5vh;
 }
 .input_container{
     display: flex;
@@ -48,21 +51,8 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-.Register_container{
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50% , -50%);
-    min-width: fit-content;
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(17, 17, 17, 0);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    
-}.Register_page_links{
-    color: rgb(33, 192, 236);
+.Register_page_links{
+    color: rgb(57, 26, 215);
     text-decoration: underline;
 }
 .Register_container h1{

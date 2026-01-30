@@ -1,139 +1,35 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+
 import './home.css'
-import { Profile, NewRequest, Requests } from "./Menus";
-import profileLogo from './assets/profile.jpg'
+import wasteImg from './assets/e waste2.jpg';
+
 function Home() {
-    const navigate = useNavigate();
-    const [showMenu, setShowMenu] = useState(false);
-    const [userLogedIn, setUserLogedIn] = useState(false);
-    const [adminLogedIn, setAdminLogedIn] = useState(false);
-    const [isLogedIn, setIsLogedIn] = useState(false);
-    const [isProfile, setIsProfile] = useState(false);
-    const [isNewRequest, setIsNewRequest] = useState(false);
-    const [isRequest, setIsRequest] = useState(false);
-    useEffect(
-        () => {
-            const logedIn = localStorage.getItem("isLogedIn") === "true";
-            setIsLogedIn(logedIn);
-        },
-        []
-    )
 
-    const updateLogins = () => {
-        const logedIn = localStorage.getItem("isLogedIn") === "true";
-        if (logedIn) {
+        return (
 
-            const isUser = localStorage.getItem("isUser") === "true";
+            <div className="front_page">
+                <h1 className="page_heading"> E-WASTE MANAGEMENT</h1>
+                <br></br>
+                <p className="page_para">
+                    <span className="first_letter">E</span>lectronic waste (e-waste) has emerged as one of the fastest-growing waste streams in the world due to rapid digitalization,
+                    technological upgrades, and increased consumption of electronic devices. According to global estimates,
+                    the world generates over 50 million metric tonnes of e-waste every year, and this figure is expected to rise significantly in the coming decades.
+                    However, less than 20% of global e-waste is formally recycled, while the rest is dumped, landfilled,
+                    or handled by informal sectors. This poses a serious global challenge as e-waste contains toxic substances such as lead,
+                    mercury, and cadmium, which threaten ecosystems and human health, while also containing valuable materials like gold, copper,
+                    and rare earth elements that are often lost due to improper recycling.
 
-            if (isUser) {
-                setUserLogedIn(true);
-                setAdminLogedIn(false);
-            }
-            else {
-                setAdminLogedIn(true);
-                setUserLogedIn(false);
-            }
-
-        }
-        else {
-            setUserLogedIn(false);
-            setAdminLogedIn(false);
-        }
-        setShowMenu(!showMenu);
-    }
-    const removeCredentials = () => {
-        localStorage.clear();
-        setShowMenu(false);
-        setUserLogedIn(false);
-        setAdminLogedIn(false);
-        setIsLogedIn(false);
-        setIsProfile(false);
-        setIsNewRequest(false);
-    }
-
-    const reback = () => {
-        setIsNewRequest(false);
-    }
-    function GetMenu() {
-        if (showMenu) {
-            if (userLogedIn) {
-                return (
-                    <div className="menu">
-                        <button className="menu_links" onClick={() => {
-                            reback();
-                            setIsNewRequest(true);
-                        }}>New request</button>
-                        <button className="menu_links">Request History</button>
-                        <button className="menu_links">About Us</button>
-                        <button className="menu_links">Contact Us</button>
-                        <button type="button" className="menu_links" onClick={removeCredentials}>Log Out</button>
-
-                    </div>
-                )
-            }
-            if (adminLogedIn) {
-                return (
-                    <div className="menu">
-                        <button className="menu_links" onClick={() => {
-                            reback();
-                            setIsRequest(!isRequest);
-                        }}>Requests</button>
-                        <button className="menu_links" >User List</button>
-                        <button className="menu_links">About Us</button>
-                        <button className="menu_links">Contact Us</button>
-                        <button type="button" className="menu_links" onClick={removeCredentials}>Log Out</button>
-
-                    </div>
-                )
-            }
-            return (
-                <div className="menu">
-                    <Link className="menu_links">About Us</Link>
-                    <Link className="menu_links">Contact Us</Link>
-                </div>
-            )
-        }
-        return <></>;
-    }
-    return (
-        <div className="userPage">
-            <div className="header">
-                <Link to='/home' className="user_link">
-                    Home
-                </Link>
-                <div className="header_right_links">
-                    <div className="profile_container">
-                        {
-                            isProfile && <Profile />
-                        }
-                    </div>
-                    {
-                        isLogedIn ?
-                            <img src={profileLogo} id="userProfile" onClick={() => setIsProfile(!isProfile)} />
-                            : <Link className="menu_links user_link" to='/login'>SignIn / SignUp</Link>
-                    }
-                    <div id="user_options" className="user_link" onClick={updateLogins}>
-                        <div className="user_options_line"></div>
-                        <div className="user_options_line"></div>
-                        <div className="user_options_line"></div>
-                    </div>
-                </div>
-
+                    In India, the e-waste problem is growing rapidly alongside urbanization, population growth,
+                    and increased use of electronic products. India is the third-largest e-waste generator in the world,
+                    producing over 1.5 million metric tonnes of e-waste annually.
+                    A major concern is that a large portion of this waste is processed by the informal recycling sector
+                    using unsafe methods such as open burning and acid leaching, leading to severe air, water,
+                    and soil pollution. The lack of awareness, insufficient collection systems, and
+                    limited implementation of formal recycling infrastructure further worsen the problem.
+                    Effective e-waste management in India and across the world is therefore essential to reduce environmental damage,
+                    protect public health, conserve valuable resources, and move toward sustainable and circular economic practices.
+                </p>
+                <img src={wasteImg} alt="E-waste" className="wasteImage" />
             </div>
-            <div className="userBody">
-                <div>
-                    {
-                        isNewRequest && <NewRequest />
-                    }
-                    {
-                        isRequest &&
-                        <Requests />
-                    }
-                </div>
-                {GetMenu()}
-            </div>
-        </div>
-    )
+        )
 }
 export default Home;

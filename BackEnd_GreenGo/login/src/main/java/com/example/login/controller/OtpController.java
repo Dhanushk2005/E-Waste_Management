@@ -23,6 +23,7 @@ public class OtpController {
         if(!EmailValidation.isProperMail(email)){
             return "Give Valid Mail Id";
         }
+
         if(userService.checkUserExistance(email)){
             return "User Already Exists";
         }

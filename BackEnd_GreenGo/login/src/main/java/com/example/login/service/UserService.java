@@ -9,7 +9,7 @@ import com.example.login.repository.UserRepository;
 @Service
 public class UserService {
 
-    @Autowired
+    @Autowired 
     private UserRepository userRepo;
 
     public boolean saveTheUser(Users user){
